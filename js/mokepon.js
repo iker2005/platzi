@@ -58,20 +58,17 @@ function seleccionar_ataque_enemigo(){
     }else{
         ataqueEnemigo = "Tierra"
     }
-    crear_mensaje()
+    combate()
 }
 function combate(){
-    if(pc == jugador){
+    if(ataqueEnemigo == ataqueJugadorjugador){
+        alert("empate")
+    }else if(ataqueJugadorjugador == "fuego" && ataqueEnemigo == "tierra"){
         alert("ganaste")
-    }else if(jugador == 1 && pc == 3){
+    }else if(ataqueJugadorjugador == "agua" && ataqueEnemigo == "fuego"){
         alert("ganaste")
-        triunfos = triunfos + 1
-    }else if(jugador == 2 && pc == 1){
+    }else if(ataqueJugadorjugador == "tierra" && ataqueEnemigo == "agua"){
         alert("ganaste")
-        triunfos = triunfos + 1
-    }else if(jugador == 3 && pc == 2){
-        alert("ganaste")
-        triunfos = triunfos + 1 
     }else{
         alert("perdiste")
     }
