@@ -64,19 +64,19 @@ function combate(){
     if(ataqueEnemigo == ataqueJugadorjugador){
         alert("empate")
     }else if(ataqueJugadorjugador == "fuego" && ataqueEnemigo == "tierra"){
-        alert("ganaste")
+        crear_mensaje("ganaste")
     }else if(ataqueJugadorjugador == "agua" && ataqueEnemigo == "fuego"){
-        alert("ganaste")
+        crear_mensaje("ganaste")
     }else if(ataqueJugadorjugador == "tierra" && ataqueEnemigo == "agua"){
-        alert("ganaste")
+        crear_mensaje("ganaste")
     }else{
-        alert("perdiste")
+        crear_mensaje("perdiste")
     }
 }    
-function crear_mensaje(){
+function crear_mensaje(resultado){
     let sectionMensajes = document.getElementById("mensajes")
     let parrafo = document.createElement("p")
-    parrafo.innerHTML = "Tu mascota ataco con " + ataqueJugador + ", la mascota del enemigo ataco con " + ataqueEnemigo + "- GANASTE"
+    parrafo.innerHTML = "Tu mascota ataco con " + ataqueJugador + ", la mascota del enemigo ataco con " + ataqueEnemigo + " - " + resultado
     sectionMensajes.appendChild(parrafo)
 }
 function aleatorio(min,max){
